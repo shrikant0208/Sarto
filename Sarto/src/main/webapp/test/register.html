@@ -1,0 +1,85 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+    <%@ taglib prefix="s"  uri="http://www.springframework.org/tags/form"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<script
+		src="${pageContext.request.contextPath}/resources/js/jquery-1.9.1.min.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Custom Validation With Sprin MVC</title>
+</head>
+<body>
+
+<%-- <s:form method="Post" commandName="acc" action="register.html">
+<table cellspacing="2" cellpadding="2">
+<tr>
+<td>Password</td>
+<td><s:password path="password"/></td>
+<td><s:errors path="password"></s:errors></td>
+
+<td>Phone</td>
+<td><s:password path="phone"/></td>
+<td><s:errors path="phone"></s:errors></td>
+</tr>
+
+<tr>
+<td>;nbsp</td>
+<td colspan="2s"><input type="submit" value="save"/></td>
+
+</tr>
+</table>
+</s:form> 
+ --%>
+ <h1>Hi</h1>
+ <h2>${msg}</h2>
+<%-- <label>hello</label>
+<table cellspacing="2" cellpadding="2">
+<tr>
+<td>Password</td>
+<td><input value="" id="pass"></input></td>
+<td><label></label></td>
+
+<td>Phone</td>
+<td><input value="" id="phone"></input></td>
+<td><label></label></td>
+</tr>
+
+<tr>
+<td>&nbsp</td>
+<td colspan="2s"><input type="submit" id ="target" value="save"/></td>
+
+</tr>
+</table>
+
+</body>
+</html>
+<script type="text/javascript">
+
+$(document).ready(function(){
+	
+	
+	$( "#target" ).click(function() {
+		dataObj={};
+		dataObj["password"]=$("#pass").val();
+		dataObj["phone"]=$("#phone").val();
+$.ajax({
+	type: "POST",
+	url : '/registerss',
+	data: JSON.stringify(dataObj),
+	 contentType: "application/json",
+	async: false,
+	success : function(data) {
+		console.log(data);
+	 	console.log("sucess");
+	}
+});//ajax
+		});
+
+	
+	
+});
+ --%>
+
+
+</script>
