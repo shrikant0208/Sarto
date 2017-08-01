@@ -1,10 +1,16 @@
 package com.sixers.model;
 
 public class Address {
+
+private String location;	
 private String country;
 private String city;
 private int pincode;
 private String street;
+private String state;
+
+
+
 
 public String getCountry() {
 	return country;
@@ -29,6 +35,18 @@ public String getStreet() {
 }
 public void setStreet(String street) {
 	this.street = street;
+}
+public String getLocation() {
+	return location;
+}
+public void setLocation(String location) {
+	this.location = location;
+}
+public String getState() {
+	return state;
+}
+public void setState(String state) {
+	this.state = state;
 }
 
 
