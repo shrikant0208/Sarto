@@ -19,6 +19,8 @@ import com.sixers.annotationclasses.HobbyValidator;
 @Constraint(validatedBy = HobbyValidator.class)
 public @interface IsValidHobby {
 	
+	/*CHECKING THE HOBBY VALID OR NOT*/
+	
 	String listOfHobbies() default ("Football|Tennis|Pool ");
 	
 	
